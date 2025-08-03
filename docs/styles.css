@@ -195,6 +195,7 @@ header {
     align-items: center;
     position: relative;
     z-index: 10;
+    object-fit: cover;
 }
 
 .hukidasi {
