@@ -188,7 +188,7 @@ header {
   
 }
 .content .mainvisual{
-    width: 60vw;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content: center;
