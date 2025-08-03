@@ -197,9 +197,7 @@ header {
     z-index: 10;
     object-fit: cover;
 }
-.content .mainvisual img{
-    width: 80vw;
-}
+
 .hukidasi {
     position: absolute;
     top: 4%;
