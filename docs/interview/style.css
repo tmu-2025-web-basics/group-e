@@ -1,0 +1,467 @@
+.slide-name {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #000;
+  text-align: center;
+}
+/* インタビュー紹介文用 */
+.interview-introduction {
+  font-size: 1.5rem;
+  color: #000000;
+  margin: 24px 0;
+  text-align: center;
+}
+/* スライダー横並び・アニメーション */
+.slider-track {
+  display: flex;
+  transition: transform 0.75s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+  width: 100%;
+}
+.info {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  border: 2px solid rgb(81, 206, 255);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 1010;
+  position: fixed;
+  top: 1vw;
+  left: 1vw;
+}
+
+.info:hover {
+  box-shadow: 0 4px 20px rgba(0, 183, 255, 0.431);
+  background-color: #e1f0fc;
+}
+.info:hover {
+  transform: scale(1.1);    
+}
+
+
+.info a {
+  margin: 0;
+  font-size: 5vw;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: rgb(3, 179, 210);
+  text-decoration: none;
+}
+.top {
+  width:10vw;
+  height: 10vw;
+  position: fixed;
+  top: 13vw;
+  left:  1vw;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgb(81, 206, 255);
+  background-color: white;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer; 
+}
+.top:hover {
+  box-shadow: 0 4px 20px rgba(0, 183, 255, 0.431);
+  background-color: #e1f0fc;
+  transform: scale(1.1);
+}
+.top a {
+  margin: 0;
+  font-size: 3.5svw;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: rgb(3, 179, 210);
+  text-decoration: none;
+}
+.header-title {
+  width: 25vw;
+  position: fixed;
+  top: 5vw;
+  right: 5vw;
+  z-index: 1000;
+}
+
+.header-title img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+.profile-card {
+  flex: 0 0 99%;
+  max-width: 99%;
+  min-width: 350px;
+  height: 310px;
+  margin: 0 ;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.slide-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  background: #ffffff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #42BDFF;
+  color: #fff;
+  text-align: center;
+  z-index: 100;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+main {
+  padding-top: 56px;
+}
+
+.top-area {
+  background: #fff;
+  padding: 24px 0 16px 0;
+  min-height: 80px;
+}
+
+/* 上部白い部分のflex横並び */
+.top-area-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.top-duck-img {
+  width: 140px;
+  height: 105px;
+  object-fit: contain;
+  margin-top: 70px;
+}
+.top-duck-img.left {
+  margin-left: 32px;
+  margin-right: 24px;
+}
+.top-duck-img.right {
+  margin-right: 32px;
+  margin-left: 24px;
+}
+.top-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slider-section {
+  background: #42BDFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 18px;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+  min-height: 260px;
+  height: 340px;
+  overflow: hidden;
+}
+.slider-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #42BDFF;
+  cursor: pointer;
+  width: 40px;
+  height: 60px;
+  z-index: 2;
+  margin-left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider-btn.prev {
+  left: 0;
+}
+.slider-btn.next {
+  right: 0;
+}
+.slider-btn:active {
+  background: #42BDFF;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -16px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #42BDFF;
+  margin: 0 3px;
+  display: inline-block;
+  transition: background 0.2s;
+}
+.dot.active {
+  background: #42BDFF;
+}
+.more-btn {
+  margin: 8px 0 0 0;
+  padding: 4px 16px;
+  border: 1px solid #42BDFF;
+  border-radius: 4px;
+  background: #fff;
+  color: #42BDFF;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.more-btn:active {
+  background: #42BDFF;
+}
+
+.bottom-area {
+  width: 90%;
+  min-height: 320px;
+  background: rgba(66, 189, 255, 0.18);
+  border-radius: 40px 40px 40px 40px/60px 60px 60px 60px;
+  margin: 24px auto 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 0;
+  box-sizing: border-box;
+  position: relative;
+  transition: opacity 0.4s;
+}
+
+.close-bottom {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  background: #fff;
+  border: 1px solid #42BDFF;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.6rem;
+  color: #42BDFF;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.close-bottom:hover {
+  background: #eee;
+  color: #222;
+}
+.bottom-content {
+  width: 90%;
+  min-height: 120px;
+}
+
+/* 質問文（太い文字）のスタイル */
+.bottom-content p strong {
+  display: block;
+  background-color: rgba(66, 189, 255, 0.3);
+  padding: 5px;
+  text-align: left;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* 回答文（細い文字）のスタイル */
+.bottom-content p {
+  background-color: #ffffff;
+  padding: 5px;
+  margin: 10px 0 auto 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* strongタグが含まれている段落の調整 */
+.bottom-content p:has(strong) {
+  margin-left: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* 回答者アイコンと名前のスタイル */
+.speaker-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 0 10px 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.speaker-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.speaker-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 回答コンテナ全体のスタイル */
+.answer-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 15px 40px;
+
+  padding: 5px;
+  border-radius: 5px;
+ 
+}
+
+.answer-container .speaker-info {
+  margin: 0 10px 0 0;
+  flex-shrink: 0;
+}
+
+.answer-text {
+  flex: 1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer {
+  width: 100vw;
+  height: 100px;
+  background-color: #42BDFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-align: center;
+  clear: both;
+}
+.footer .text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+}
+@media (max-width: 480px) {
+  .slider-track {
+    width: 100vw;
+  }
+  .profile-card {
+    min-width: 95vw;
+    max-width: 95vw;
+    height: 160px;
+
+    font-size: 1rem;
+  }
+  .slider-container {
+    max-width: 98vw;
+    min-height: 220px;
+    height: 260px;
+  }
+  .profile-card {
+    min-width: 95vw;
+    max-width: 95vw;
+    min-height: 200px;
+    height: 200px;
+
+  }
+  .avatar {
+    width: 70px;
+    height: 70px;
+
+  }
+}
+
+@media (max-width: 850px) {
+  .interview-introduction {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 860px){
+  .info {
+      position: fixed;
+      max-width: 70px;
+      max-height: 70px;
+      top: 1vw;
+      left: 2vw;
+  }
+  .info a {
+      font-size: 40px;
+  }
+  .top {
+      position: fixed;
+      width: 70px;
+      height: 70px;
+      top: 13vh;
+      left: 2vw;
+  }
+  .top a {
+      font-size: 30px;
+  }
+}
